@@ -1,0 +1,30 @@
+
+.navigation__logging-button.loggedIn {
+    display: none;
+}
+
+.navigation__signin-button.loggedIn {
+    display: none;
+}
+
+.navigation__username-button {
+    display: none;
+}
+
+.navigation__logout-button {
+    display: none;
+}
+
+.navigation__username-button.loggedIn{
+    position: absolute;
+    top: 1.3rem;
+    right: 20rem;
+    display: block;
+}
+
+.navigation__logout-button.loggedIn{
+    position: absolute;
+    top: 1.3rem;
+    right: 4rem;
+    display: block;
+}

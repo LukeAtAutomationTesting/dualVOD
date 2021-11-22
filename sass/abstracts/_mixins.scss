@@ -1,0 +1,42 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin centerhack {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint==mobile {
+        @media (max-width: 1023px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint==small-desktop {
+        @media (min-width: 1024px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint==medium-desktop {
+        @media (min-width: 1250px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint==big-desktop {
+        @media (min-width: 2000px) {
+            @content;
+        }
+    }
+}

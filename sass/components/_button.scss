@@ -1,0 +1,56 @@
+.btn {
+    width: 15rem;
+    height: 4rem;
+    padding: 1rem;
+    float: right;
+    border-radius: 50px;
+    transition: all .5s;
+    font-size: 1.6rem;
+    border-style: none;
+    background-color: $color-secondary;
+    line-height: 1.6rem;
+    text-align: center;
+    color: $color-white;
+    text-decoration: none;
+    position: absolute;
+    top: 2rem;
+    right: 0;
+
+    //Change for the <button> element
+    border: none;
+    cursor: pointer;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+    
+    &:hover {
+        background-color: $color-black;
+    } 
+}
+
+// position: absolute;
+// top: 0;
+// left: 50%;
+// transform: translateX(calc(-50% + 12.5rem));
+// height: 6rem;
+// padding: 2.3rem;
+// border-style: none;
+// background-color: $color-secondary;
+// width: 15rem;
+// border-radius: 50px;
+// font-size: 1.6rem;
+// cursor: pointer;
+// color: $color-white;
+// transition: .5s;
+
+// &:active,
+// &:focus {
+//     outline: none;
+// }
+
+// &:hover {
+//     background-color: $color-black;
+// }
+// }

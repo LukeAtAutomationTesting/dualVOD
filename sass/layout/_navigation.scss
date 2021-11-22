@@ -1,0 +1,108 @@
+.navigation {
+    width: 75%;
+    height: 15rem;
+    float: left;
+    z-index: 100;
+
+    // @include respond(mobile) {
+    //     width: 100%;
+    //     background-color: #ddd;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    // }
+
+
+    @include clearfix;
+
+    &__list {
+        list-style-type: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -35%);
+
+        @include respond(mobile) {
+            display: none;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+
+        @include respond(mobile) {
+            display: flex;
+        }
+    }
+
+    &__link {
+
+        &:link,
+        &:visited {
+            text-decoration: none;
+            font-size: 1.8rem;
+            color: $color-white;
+            padding: 1rem 1rem;
+            font-weight: 300;
+            border-top: none;
+            box-shadow: none;
+            transition: .2s;
+            border-top: 2px solid transparent;
+
+            @include respond(small-desktop) {
+                padding: 1rem 1.5rem;
+            }
+
+            @include respond(medium-desktop) {
+                padding: 1rem 3rem;
+            }
+        }
+
+        &:hover {
+            border-top: 2px solid $color-secondary;
+            -webkit-box-shadow: 0px 8px 20px -5px rgba(0, 0, 0, 0.7);
+            -moz-box-shadow: 0px 8px 20px -5px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 8px 20px -5px rgba(0, 0, 0, 0.7);
+
+        }
+    }
+
+    &__logging-button {
+        position: absolute;
+        top: 1.3rem;
+        right: 20rem;
+
+        @include respond(mobile) {
+            display: none;
+        }
+    }
+
+    &__signin-button {
+        position: absolute;
+        top: 1.3rem;
+        right: 4rem;
+
+        @include respond(mobile) {
+            display: none;
+        }
+    }
+
+    &__hamburger {
+        position: absolute;
+        top: 5rem;
+        right: 10rem;
+
+        @include respond(small-desktop) {
+            display: none;
+        }
+    }
+
+    &__hamburger a {
+        color: $color-black;
+    }
+
+    &__hamburger i {
+        font-size: 6rem;
+    }
+
+}

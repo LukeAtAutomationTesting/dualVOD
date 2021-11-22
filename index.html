@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="sass/main.css">
+    <script src="https://kit.fontawesome.com/2e9bf3b794.js"></script>
+    <link rel="stylesheet" href="css/mainPage.css">
+
+    <title>dualVOD | Najlepsze filmy tu i teraz</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__menu">
+            <div class="header__logo-box">
+                <span><a href="#">dualVOD</a></span>
+            </div>
+            <div class="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link">Strona główna</a></li>
+                    <li class="navigation__item"><a href="#sec-1" class="navigation__link">TOP 15 filmów</a></li>
+                    <li class="navigation__item"><a href="#sec-2" class="navigation__link">Kategorie</a></li>
+                </ul>
+                <div class="navigation__hamburger">
+                    <a href="#"><i class="fas fa-bars"></i></a>
+                </div>
+
+                <div class="navigation__logging-button loggedInButtons">
+                    <a href="LoginPage.html" class="btn">Zaloguj się</a>
+                </div>
+                <div class="navigation__signin-button loggedInButtons">
+                    <a href="RegisterPage.html" class="btn">Zarejestruj się</a>
+                </div>
+
+                <div class="navigation__username-button loggedInButtons">
+                    <a class="btn"></a>
+                </div>
+
+                <div class="navigation__logout-button loggedInButtons" id="logoutButton">
+                    <a class="btn">Wyloguj się</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--small">Największe kinowe hity</span>
+                <span class="heading-primary--big">DOSTĘPNE DLA KAŻDEGO</span>
+            </h1>
+        </div>
+    </header>
+    <main>
+        <section class="section-about" id="sec-1">
+            <div class="row">
+                <h2 class="heading-secondary u-center-text u-margin-bottom-large">Top 15 dzisiaj</h2>
+                <div class="col-1-of-3">
+                    <div class="card-about">
+                        <div class="card-about__image">
+                            <img src="img/movie_thumbimages/movie_16.jpg" alt="">
+                            <div class="card-about__overlay card-about__overlay--blur">
+                                <div class="card-about__title">Ojciec chrzestny</div>
+                                <p class="card-about__description">
+                                    reż. Francis Ford Coppola, 1972
+                                </p>
+                            </div>
+                            <div class="modal-container" id="modal_container">
+                                <div class="modal">
+                                    <h1>Ojciec chrzestny</h1>
+                                    <p>Lorem adnhuwhduhqwduhqwudhquwdh</p>
+                                    <button class="close-modal">Zamknij</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="card-about">
+                        <div class="card-about__image">
+                            <img src="img/movie_thumbimages/movie_22.jpg" alt="">
+                            <div class="card-about__overlay card-about__overlay--blur">
+                                <div class="card-about__title">Skazani na Shawshank</div>
+                                <p class="card-about__description">
+                                    reż. Frank Darabont, 1994
+                                </p>
+                            </div>
+                            <div class="modal-container" id="modal_container">
+                                <div class="modal">
+                                    <h1>Skazani na Shawshank</h1>
+                                    <p>Lorem adnhuwhduhqwduhqwudhquwdh</p>
+                                    <button class="close-modal">Zamknij</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="card-about">
+                        <div class="card-about__image">
+                            <img src="img/movie_thumbimages/movie_12.jpg" alt="">
+                            <div class="card-about__overlay card-about__overlay--blur">
+                                <div class="card-about__title">Mroczny Rycerz</div>
+                                <p class="card-about__description">
+                                    reż. Christopher Nolan, 2008
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="card-about">
+                        <div class="card-about__image">
+                            <img src="img/movie_thumbimages/movie_20.jpg" alt="">
+                            <div class="card-about__overlay card-about__overlay--blur">
+                                <div class="card-about__title">Ojciec chrzestny II</div>
+                                <p class="card-about__description">
+                                    reż. Francis Ford Coppola, 1974
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="card-about">
+                        <div class="card-about__image">
+                            <img src="img/movie_thumbimages/movie_18.jpg" alt="">
+                            <div class="card-about__overlay card-about__overlay--blur">
+                                <div class="card-about__title">Chłopcy z ferajny</div>
+                                <p class="card-about__description">
+                                    reż. Martin Scorsese, 1990
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="card-about">
+                        <div class="card-about__image">
+                            <img src="img/movie_thumbimages/movie_19.jpg" alt="">
+                            <div class="card-about__overlay card-about__overlay--blur">
+                                <div class="card-about__title">Forrest Gump</div>
+                                <p class="card-about__description">
+                                    reż. Robert Zemeckis, 1994
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="card-about">
+                        <div class="card-about__image">
+                            <img src="img/movie_thumbimages/movie_21.jpg" alt="">
+                            <div class="card-about__overlay card-about__overlay--blur">
+                                <div class="card-about__title">Seksmisja</div>
+                                <p class="card-about__description">
+                                    reż. Juliusz Machulski, 1984
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="card-about">
+                        <div class="card-about__image">
+                            <img src="img/movie_thumbimages/movie_3.jpg" alt="">
+                            <div class="card-about__overlay card-about__overlay--blur">
+                                <div class="card-about__title">Asterix i Obelix: Misja Kleopatra</div>
+                                <p class="card-about__description">
+                                    reż. Alain Chabat, 2002
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="card-about">
+                        <div class="card-about__image">
+                            <img src="img/movie_thumbimages/movie_11.jpg" alt="">
+                            <div class="card-about__overlay card-about__overlay--blur">
+                                <div class="card-about__title">Lot nad kukułczym gniazdem</div>
+                                <p class="card-about__description">
+                                    reż. Miloš Forman, 1975
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="card-about">
+                        <div class="card-about__image">
+                            <img src="img/movie_thumbimages/movie_10.jpg" alt="">
+                            <div class="card-about__overlay card-about__overlay--blur">
+                                <div class="card-about__title">Lista Schindlera</div>
+                                <p class="card-about__description">
+                                    reż. Steven Spielberg, 1993
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="card-about">
+                        <div class="card-about__image">
+                            <img src="img/movie_thumbimages/movie_13.jpg" alt="">
+                            <div class="card-about__overlay card-about__overlay--blur">
+                                <div class="card-about__title">Mroczny Rycerz powstaje</div>
+                                <p class="card-about__description">
+                                    reż. Christopher Nolan, 2012
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="card-about">
+                        <div class="card-about__image">
+                            <img src="img/movie_thumbimages/movie_17.jpg" alt="">
+                            <div class="card-about__overlay card-about__overlay--blur">
+                                <div class="card-about__title">Matrix</div>
+                                <p class="card-about__description">
+                                    reż. Lilly Wachowski / Lana Wachowski, 1999
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-features" id="sec-2">
+            <div class="row">
+                <div class="col-3-of-4">
+                    <h2 class="heading-secondary">Kategorie</h2>
+                    <div class="features-tags">
+                        <a class="features-tags__link active" href="javascript:;" data-change="text-1">Dramat</a>
+                        <a class="features-tags__link" href="javascript:;" data-change="text-2">Kino akcji</a>
+                        <a class="features-tags__link" href="javascript:;" data-change="text-3">Komedia</a>
+                    </div>
+                    <div class="features-tags__content active" id="text-1">
+                        <div class="row">
+                            <div class="col-1-of-2">
+                                <h3 class="heading-tertiary">Skazani na Shawshank</h3>
+                                <p class="default-text default-text__margin-right">
+                                    Film nakręcony na podstawie książki mistrza horrorów Stephena Kinga. Andy Dufresne (Tim Robbins), dobrze zarabiający bankier z Nowej Anglii, 
+                                    zostaje oskarżony o podwójne zabójstwo - swojej żony i jej kochanka. Uparcie twierdzi, że jest niewinny, ale dzięki niezbitym dowodom zostaje 
+                                    skazany na podwójne dożywocie w więzieniu Shawshank. Shawshank rządzi hipokryta i fanatyk biblijny, naczelnik Norton (Bob Gunton), a wraz z nim 
+                                    sadystyczni strażnicy. Andy już po kilku dniach poznaje brutalną, więzienną rzeczywistość, ale dzięki wrodzonej inteligencji, sprytowi oraz pomocy 
+                                    przyjaciela Ellisa Boyda "Reda" Reddinga (Morgan Freeman) udaje mu się zachować nadzieję, która pozwoli dokonać zemsty.
+                                </p>
+                            </div>
+                            <div class="col-1-of-2">
+                                <div class="card-about__image">
+                                    <img src="img/movie_thumbimages/movie_22.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="features-tags__content" id="text-2">
+                        <div class="row">
+                            <div class="col-1-of-2">
+                                <h3 class="heading-tertiary">Mroczny Rycerz</h3>
+                                <p class="default-text default-text__margin-right">
+                                    W nowym filmie Batman podejmuje szeroko zakrojoną walkę z przestępczością. Z pomocą porucznika Jima Gordona i prokuratora okręgowego Harveya Denta 
+                                    zabiera się za rozpracowywanie istniejących organizacji przestępczych nękających mieszkańców miasta. Współpraca przynosi efekty, ale bohaterowie wkrótce 
+                                    padną ofiarą chaosu, który rozpęta rosnący w siłę genialny przestępca, znany przerażonym mieszkańcom Gotham jako Joker.
+                                </p>
+                            </div>
+                            <div class="col-1-of-2">
+                                <div class="card-about__image">
+                                    <img src="img/movie_thumbimages/movie_12.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="features-tags__content" id="text-3">
+                        <div class="row">
+                            <div class="col-1-of-2">
+                                <h3 class="heading-tertiary">Złap mnie jeśli potrafisz</h3>
+                                <p class="default-text default-text__margin-right">
+                                    Film jest oparty na prawdziwej historii Franka Abagnale'a, najmłodszej osoby w historii, która znalazła się na liście najbardziej poszukiwanych 
+                                    przestępców FBI. Frank Abagnale nie był zwykłym złodziejem, nie włamywał się do domów i nie kradł kosztowności. Jego specjalnością stały się banki i 
+                                    linie lotnicze. Frank dokonał wszystkich swoich fałszerstw w przeciągu pięciu lat, zarobił ponad 2,5 mln dolarów we wszystkich stanach Ameryki i 
+                                    w 26 krajach. W ciągu swojej złodziejskiej "kariery" wielokrotnie wcielał się w przedstawicieli różnych profesji - był pilotem linii lotniczych Pan-Am, 
+                                    lekarzem, profesorem Uniwersytetu, a nawet asystentem prokuratora generalnego.
+                                </p>
+                            </div>
+                            <div class="col-1-of-2">
+                                <div class="card-about__image">
+                                    <img src="img/movie_thumbimages/movie_29.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="section-footer">
+            <div class="footer-info">
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <div class="footer-info__copyright">
+                            <p>Copyright © 2021 duoVOD 
+                                </br>Website coded for learning purposes by: Łukasz Krzywicki, Marek Kozyra, <br>Robert Szydłowski, Marcin Wojdyła, Łukasz Bandzarewicz</p>
+                        </div>
+                    </div>
+                    <div class="col-1-of-4">
+                        <div class="">
+                            <a class="features-tags__footer-link active" href="javascript:;" data-change="text-1">Dramat</a>
+                            <a class="features-tags__footer-link" href="javascript:;" data-change="text-2">Kino akcji</a>
+                            <a class="features-tags__footer-link" href="javascript:;" data-change="text-3">Komedia</a>
+                        </div>
+                    </div>
+                    <div class="col-1-of-4">
+                        <div class="footer-info__logo-box">
+                            <span><a href="#">dualVOD</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js"
+    integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>

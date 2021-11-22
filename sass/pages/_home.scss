@@ -1,0 +1,33 @@
+.section-features {
+    background-color: $color-white;
+    padding: 10rem 0;
+
+    @include respond(mobile) {
+        margin: 0 3rem;
+    }
+}
+
+.section-about {
+    background-color: #F9F9F9;
+    padding: 14rem 0 8rem 0;
+}
+
+.section-testimonials {
+    background-color: $color-white;
+    padding: 10rem 0;
+}
+
+.section-pricing {
+    background-color: #F9F9F9;
+    padding: 12rem 0 8rem 0;
+}
+
+.section-contact {
+    background-color: $color-white;
+    padding: 10rem 0;
+}
+
+.section-footer {
+    background-color: #F9F9F9;
+    padding: 8rem 0;
+}

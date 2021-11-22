@@ -1,0 +1,31 @@
+.pricing-card {
+    background-color: $color-white;
+    padding: 4rem 4rem 1rem 4rem;
+    
+    
+    &__text h3 {
+        border-bottom: 2px solid rgb(240, 238, 238);
+    }
+
+    &__details {
+        border-bottom: 2px solid rgb(240, 238, 238);
+    }
+
+    &__details p {
+        font-size: 1.5rem;
+        color: $color-gray-dark;
+        padding-top: 1.2rem;
+        line-height: 165%;
+    }
+
+    &__price-button {
+        padding: 2.6rem 0;
+        position: relative;
+    }
+
+    &__price-button span {
+        font-size: 2rem;
+    }
+}
+    
+   

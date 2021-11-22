@@ -1,0 +1,72 @@
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+}
+
+.heading-primary {
+    color: $color-white;
+    min-width: 70rem;
+    margin-bottom: 6rem;
+
+    @include respond(mobile) {
+        margin-bottom: 15rem;
+        height: 30rem;
+    }
+
+    &--small {
+        display: block;
+        letter-spacing: 4px;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &--big {
+        display: block;
+        font-weight: 200;
+        font-size: 6.5rem;
+        text-align: center;
+
+        @include respond(mobile) {
+            font-size: 8rem;
+        }
+    }
+}
+
+.heading-secondary {
+    color: $color-black;
+    font-size: 5rem;
+    font-weight: 300;
+
+    &--white {
+        color: $color-white;
+        font-size: 4.6rem;
+        font-weight: 300;
+    }
+}
+
+.heading-tertiary {
+    color: $color-black;
+    font-size: 3.4rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin-bottom: 1.4rem;
+}
+
+.heading-quaternary {
+    color: $color-black;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.default-text {
+    color: $color-gray-dark;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 300;
+    margin-bottom: 2.2rem;
+
+    &__margin-right {
+        margin-right: 1rem;
+    }
+}
