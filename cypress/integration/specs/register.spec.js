@@ -1,15 +1,13 @@
 /// <reference types="cypress" />
 
 describe('A new user registration tests', () => {
-
-    before(function () {
-        // cy.visit('https://lukeatautomationtesting.github.io/dualVOD-test-platform/index.html');
-        cy.visit('http://127.0.0.1:5500/index.html');
-        cy.url().should('include', 'index');
-    });
-
     const userEmail = 'test@gmail.com';
     const userPassword = 'test1234'
+
+    before(function () {
+        cy.visit('https://lukeatautomationtesting.github.io/dualVOD-test-platform/index.html');
+        cy.url().should('include', 'index');
+    });
 
     // REG_01
     it('should register user with correct e-mail and password', () => {
@@ -63,6 +61,6 @@ describe('A new user registration tests', () => {
                 .and('have.class', 'showError');
             cy.get('#emptyRegisterError .alert').should('contain.text', 'E-mail lub hasło jest puste');
         });
-    })
+    });
 
 });

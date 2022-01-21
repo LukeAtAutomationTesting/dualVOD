@@ -22,7 +22,7 @@ $("form").submit(function (event) {
   const user = users.find((user) => user.login === login);
 
   if (login === '' || password === '') {
-    $("#emptyRegisterError").addClass("showError");
+    $("#emptyLoginCredentialsError").addClass("showError");
     $("#loginError").removeClass("showError");
     $("#passwordError").removeClass("showError");
     return;
@@ -32,7 +32,7 @@ $("form").submit(function (event) {
     console.log(user, login, password);
     if (user.password === password) {
       $("#loginError").removeClass("showError");
-      $("#emptyRegisterError").removeClass("showError");
+      $("#emptyLoginCredentialsError").removeClass("showError");
       $("#passwordError").removeClass("showError");
 
       localStorage.setItem("user", JSON.stringify(user.login));
@@ -41,13 +41,13 @@ $("form").submit(function (event) {
     } else {
       console.log("Wrong password");
       $("#passwordError").addClass("showError");
-      $("#emptyRegisterError").removeClass("showError");
+      $("#emptyLoginCredentialsError").removeClass("showError");
       $("#loginError").removeClass("showError");
     }
   } else {
     $("#loginError").addClass("showError");
     $("#passwordError").removeClass("showError");
-    $("#emptyRegisterError").removeClass("showError");
+    $("#emptyLoginCredentialsError").removeClass("showError");
     console.log("Wrong login");
   }
 });
