@@ -60,10 +60,10 @@
     display: block;
 }
 
-#emptyRegisterError {
+#emptyLoginCredentialsError {
     display: none;
 }
 
-#emptyRegisterError.showError {
+#emptyLoginCredentialsError.showError {
     display: block;
 }
