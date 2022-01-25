@@ -99,15 +99,93 @@ hamburgerBtn.onclick = function () {
 
 const modal_container = document.getElementById('modal_container');
 
-document.querySelectorAll('.card-about').forEach(item => {
+document.querySelectorAll('.card-about').forEach((item, index) => {
     item.addEventListener('click', event => {
-        modal_container.classList.add('show')
+        modal_container.classList.add('show');
+        updateModalData(index);
     });
 });
 
 document.querySelectorAll('.close-modal').forEach(item => {
     item.addEventListener('click', event => {
-        console.log('sadasd')
-        modal_container.classList.remove('show')
+        event.preventDefault();
+        event.stopPropagation();
+        modal_container.classList.remove('show');
     });
 });
+
+const genre_filtering = document.getElementById('genre-filtering');
+genre_filtering.addEventListener('change', (event) => {
+    const genre = event.target.value;
+    if (genre === '') {
+        clearFilters();
+    } else {
+        clearFilters();
+        filterMovies(genre);
+    }
+});
+
+const start_year = document.getElementById('start-year');
+const end_year = document.getElementById('end-year');
+
+start_year.addEventListener('change', filterByYear );
+end_year.addEventListener('change', filterByYear );
+
+function filterByYear() {
+    clearFilters2();
+    yearFiltering();
+}
+
+
+function filterMovies(genre) {
+    const movies = document.querySelectorAll('.card-about');
+    document.querySelectorAll('.genre').forEach((item, index) => {
+        if (!item.textContent.includes(genre)) {
+            movies[index].classList.add('hide');
+        }
+    });
+}
+
+function clearFilters() {
+    document.querySelectorAll('.card-about').forEach(item => {
+        item.classList.remove('hide');
+    });
+}
+
+function clearFilters2() {
+    console.log('clear')
+    document.querySelectorAll('.card-about').forEach(item => {
+        item.classList.remove('hidden');
+    });
+}
+
+function updateModalData(index) {
+    const titles = document.querySelectorAll('.card-about__title');
+    const descriptions = document.querySelectorAll('.card-about__description');
+    const modal_title = document.getElementById('modal-title');
+    const modal_description = document.getElementById('modal-description');
+
+    $(modal_title).text(titles[index].textContent);
+    $(modal_description).text(descriptions[index].textContent);
+}
+
+function yearFiltering() {
+    const start_year = document.getElementById('start-year').value;
+    const end_year = document.getElementById('end-year').value;
+    const movies = document.querySelectorAll('.card-about');
+    console.log('yearFiltering', start_year, end_year);
+    document.querySelectorAll('.year').forEach((item, index) => {
+        let productionData = item.textContent;
+        if (+productionData < +start_year || +productionData > +end_year) {
+            movies[index].classList.add('hidden');
+        }
+    });
+}
+
+function resetFiltering() {
+    document.getElementById('start-year').value = 1900;
+    document.getElementById('end-year').value = 2022;
+    document.getElementById('genre-filtering').value = "";
+    clearFilters();
+    clearFilters2();
+}
