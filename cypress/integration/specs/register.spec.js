@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 
 describe('A new user registration tests', () => {
+    
     const userEmail = 'test@gmail.com';
     const userPassword = 'test1234'
 
@@ -38,6 +39,7 @@ describe('A new user registration tests', () => {
             cy.get('#cancel-register').click();
         });
 
+        // REG_02
         it('should try to register user without password', () => {
             // actions
             cy.get('.navigation__signin-button .btn').click();
@@ -50,6 +52,7 @@ describe('A new user registration tests', () => {
             cy.get('#emptyRegisterError .alert').should('contain.text', 'E-mail lub hasło jest puste');
         });
 
+        // REG_03
         it('should try to register user without e-mail', () => {
             // actions
             cy.get('.navigation__signin-button .btn').click();

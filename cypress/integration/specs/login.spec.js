@@ -4,11 +4,11 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false;
 });
 
-import BasePage from "../../support/Pages/basePage";
-import RegisterPage from "../../support/Pages/registerPage";
-import LoginPage from "../../support/Pages/loginPage";
+import BasePage from "../../support/Pages/BasePage";
+import RegisterPage from "../../support/Pages/RegisterPage";
+import LoginPage from "../../support/Pages/LoginPage";
 
-describe('A new user registration tests', () => {
+describe('Login tests', () => {
 
     const basePage = new BasePage();
     const registerPage = new RegisterPage();
@@ -21,11 +21,12 @@ describe('A new user registration tests', () => {
         basePage.accessHomepage();
     });
 
-    it('should log in on new registered user', () => {
+    // LOG_01
+    it('should log in on new registered user and then log out', () => {
         registerPage.goToRegisterPage();
         registerPage.registerNewUser(newUserEmail, newUserPassword);
         loginPage.logout();
-        loginPage.goToLoginPage();
+        loginPage.goToLoginPageByButton();
         loginPage.loginUser(newUserEmail, newUserPassword);
         loginPage.logout();
     });
@@ -33,25 +34,28 @@ describe('A new user registration tests', () => {
     describe('Empty input tests', () => {
 
         beforeEach(function () {
-            loginPage.goToLoginPage();
+            loginPage.goToLoginPageByUrl();
         });
 
         afterEach(function () {
             loginPage.cancelLogin();
         });
 
+        // LOG_02
         it('should try to log in without password', () => {
             loginPage.typeEmail(newUserEmail);
             loginPage.clickLoginButton();
             loginPage.checkingIsEmptyCredentialsErrorVisible();
         });
 
+        // LOG_03
         it('should try to log in without e-mail', () => {
             loginPage.typePassword(newUserPassword);
             loginPage.clickLoginButton();
             loginPage.checkingIsEmptyCredentialsErrorVisible();
         });
 
+        // LOG_04
         it('should try to log in without credentials', () => {
             loginPage.clickLoginButton();
             loginPage.checkingIsEmptyCredentialsErrorVisible();

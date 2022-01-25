@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import BasePage from "./basePage";
+import BasePage from "./BasePage";
 
 const emailInput = '#email-input-login';
 const passwordInput = '#password-input-login';
@@ -9,12 +9,19 @@ const userNameTextOnHomepage = '.navigation__username-button .btn';
 const logInButton = '.navigation__logging-button .btn';
 const logOutButton = '.navigation__logout-button .btn';
 const homePageLogo = '.header__logo-box span';
+const loginPageHeader = '#login-card h2.text-center';
 
 export default class LoginPage extends BasePage {
 
-    goToLoginPage() {
+    goToLoginPageByUrl() {
         //cy.visit('https://lukeatautomationtesting.github.io/dualVOD-test-platform/LoginPage.html');
         cy.visit('http://127.0.0.1:5500/LoginPage.html');
+        cy.get(loginPageHeader).should('have.text', 'Logowanie dualVOD');
+    }
+
+    goToLoginPageByButton() {
+        cy.get(logInButton).click();
+        cy.get(loginPageHeader).should('have.text', 'Logowanie dualVOD');
     }
 
     loginUser(email, password) {
