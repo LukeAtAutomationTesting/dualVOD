@@ -4,13 +4,13 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false;
 });
 
-import BasePage from "../../support/Pages/BasePage";
+import HomePage from "../../support/Pages/HomePage";
 import RegisterPage from "../../support/Pages/RegisterPage";
 import LoginPage from "../../support/Pages/LoginPage";
 
 describe('Login tests', () => {
 
-    const basePage = new BasePage();
+    const homePage = new HomePage();
     const registerPage = new RegisterPage();
     const loginPage = new LoginPage();
 
@@ -18,7 +18,7 @@ describe('Login tests', () => {
     const newUserPassword = 'pass1234';
 
     before(function () {
-        basePage.accessHomepage();
+        homePage.accessHomepage();
     });
 
     // LOG_01

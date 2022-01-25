@@ -1,7 +1,5 @@
 /// <reference types="cypress" />
 
-import BasePage from "./BasePage";
-
 const emailInput = '#email-input-login';
 const passwordInput = '#password-input-login';
 const loginButton = '#login-button';
@@ -11,7 +9,7 @@ const logOutButton = '.navigation__logout-button .btn';
 const homePageLogo = '.header__logo-box span';
 const loginPageHeader = '#login-card h2.text-center';
 
-export default class LoginPage extends BasePage {
+export default class LoginPage {
 
     goToLoginPageByUrl() {
         //cy.visit('https://lukeatautomationtesting.github.io/dualVOD-test-platform/LoginPage.html');
