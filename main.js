@@ -142,6 +142,8 @@ function filterMovies(genre) {
     document.querySelectorAll('.genre').forEach((item, index) => {
         if (!item.textContent.includes(genre)) {
             movies[index].classList.add('hide');
+        } else {
+            movies[index].classList.add('visible');
         }
     });
 }
@@ -162,11 +164,14 @@ function clearFilters2() {
 function updateModalData(index) {
     const titles = document.querySelectorAll('.card-about__title');
     const descriptions = document.querySelectorAll('.card-about__description');
+    const genres = document.querySelectorAll('.genre');
     const modal_title = document.getElementById('modal-title');
     const modal_description = document.getElementById('modal-description');
+    const modal_genre = document.getElementById('modal-genre');
 
     $(modal_title).text(titles[index].textContent);
     $(modal_description).text(descriptions[index].textContent);
+    $(modal_genre).text(genres[index].textContent);
 }
 
 function yearFiltering() {

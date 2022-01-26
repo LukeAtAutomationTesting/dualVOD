@@ -9,8 +9,7 @@ const logOutButton = '.navigation__logout-button .btn';
 export default class RegisterPage {
 
     goToRegisterPage() {
-        //cy.visit('https://lukeatautomationtesting.github.io/dualVOD-test-platform/RegisterPage.html');
-        cy.visit('http://127.0.0.1:5500/RegisterPage.html');
+        cy.visit('https://lukeatautomationtesting.github.io/dualVOD-test-platform/RegisterPage.html');
     }
 
     registerNewUser(email, password) {

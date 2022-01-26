@@ -12,8 +12,7 @@ const loginPageHeader = '#login-card h2.text-center';
 export default class LoginPage {
 
     goToLoginPageByUrl() {
-        //cy.visit('https://lukeatautomationtesting.github.io/dualVOD-test-platform/LoginPage.html');
-        cy.visit('http://127.0.0.1:5500/LoginPage.html');
+        cy.visit('https://lukeatautomationtesting.github.io/dualVOD-test-platform/LoginPage.html');
         cy.get(loginPageHeader).should('have.text', 'Logowanie dualVOD');
     }
 
