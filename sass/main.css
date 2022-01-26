@@ -303,6 +303,10 @@ body {
   display: none;
 }
 
+.genre-container {
+  padding: 10px;
+}
+
 .year { 
   display: none;
 }
@@ -315,6 +319,91 @@ body {
 .year-container {
   display: flex;
   flex-direction: row;
+  padding: 10px 10px 10px 0;
+}
+
+.year-container label:nth-child(2) {
+  padding-right: 8px;
+  padding-top: 8px;
+  font-size: 1.5rem;
+}
+
+.year-container label:nth-child(4) {
+  padding-right: 8px;
+  padding-left: 12px;
+  padding-top: 8px;
+  font-size: 1.5rem;
+}
+
+.year-container p{
+  font-size: 1.5rem;
+  width: 250px;
+  text-align: center;
+  padding: 8px 12px;
+}
+
+.filter-container button {
+  font-size: 1.5rem;
+}
+
+#genre-filtering {
+  padding: 8px 12px;
+  text-align: center;
+  color: #333333;
+  background-color: #eeeeee;
+  border: 1px solid #cccccc;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#genre-filtering option {
+  text-align: left;
+  background: #ffffff;
+}
+
+#genre-filtering:focus,
+#genre-filtering:hover {
+  outline: none;
+  border: 1px solid #bbbbbb;
+}
+
+input#start-year,
+input#end-year {
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  text-align: center;
+  color: #333333;
+  background-color: #eeeeee;
+}
+
+input#start-year:focus, 
+input#end-year:focus  {
+  background-color: #ffffff;
+  outline: none;
+}
+
+input#start-year:hover,
+input#end-year:hover  {
+  outline: none;
+  border: 1px solid #bbbbbb;
+}
+
+button#filter-btn {
+  cursor: pointer;
+  height: 35px;
+  padding: 5px;
+  align-self: center;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  text-align: center;
+  color: #333333;
+}
+
+button#filter-btn:hover {
+  outline: none;
+  border: 1px solid #bbbbbb;
+  background-color: #dddddd;
+  transition:  0.2s;
 }
 
 .pricing-card {
