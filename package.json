@@ -9,6 +9,6 @@
   "author": "Łukasz Krzywicki",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^9.3.1"
+    "cypress": "^12.5.1"
   }
 }
