@@ -8,6 +8,7 @@ describe('A new user registration tests', () => {
     before(function () {
         cy.visit('https://lukeatautomationtesting.github.io/dualVOD-test-platform/index.html');
         cy.url().should('include', 'index');
+        cy.clearLocalStorage();
     });
 
     // REG_01
